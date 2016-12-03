@@ -1,9 +1,9 @@
 <?php
 // data file
-$csv_filename = "data/data.tsv"; // relative path to data filename
+$csv_filename = "data/data.csv"; // relative path to data filename
 $line_length = "4096"; // max line lengh (increase in case you have longer lines than 1024 characters)
-$delimiter = "	"; // field delimiter character
-//$enclosure = ''; // field enclosure character
+$delimiter = ","; // field delimiter character
+$enclosure = '"'; // field enclosure character
 
 // then and now
 $then = date('Y-m-d',strtotime('10 years ago'));
@@ -21,7 +21,7 @@ if ( $fp !== FALSE ) { // if the file exists and is readable
 	// data array generation
 	$data = array();
 	$line = 0;
-	while ( ($fp_csv = fgetcsv($fp,$line_length,$delimiter)) !== FALSE ) { // begin main loop
+	while ( ($fp_csv = fgetcsv($fp,$line_length,$delimiter,$enclosure)) !== FALSE ) { // begin main loop
 		if ( $line == 0 ) {}
 		else {
 			$date = $fp_csv[0];
