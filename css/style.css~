@@ -1,0 +1,182 @@
+body {
+  font: 10px sans-serif;
+  position: relative;
+}
+
+h1 {
+	font-size:28px !important;
+}
+
+path {
+  stroke: grey;
+  /*stroke-width: 1;*/
+  fill: none;
+  cursor:pointer;
+}
+
+.main-container {
+	margin-left: 20px !important;
+}
+
+
+div.tooltip {
+  position: absolute;
+  padding: 8px;
+  font: 12px sans-serif;
+  background: #ddd;
+  border: 0px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.btn {
+	margin: 3px;
+}
+
+.btn-success, .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .open .dropdown-toggle.btn-success {
+  color: #000 !important;
+  background-color: #aaa !important;
+  border-color: #aaa !important;
+	font-weight:bold !important;
+}
+
+.centro {
+    background-color: #eee !important;
+    border-color: #eee;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path.domain{
+	display: none;
+}
+
+.bar {
+  cursor:pointer;
+}
+
+.bar:hover  {
+  fill: #000;
+  opacity:1;
+}
+
+line.topline  {
+  fill: none;
+  stroke: #ccc;
+  shape-rendering: crispEdges;
+  stroke-width:1;
+  opacity:0.5;
+}
+
+line.topline:hover {
+  fill: none;
+  stroke: #aaa;
+  shape-rendering: crispEdges;
+  stroke-width:4;
+}
+
+.specialdates line{
+	stroke: #888;
+	stroke-width:2;
+	cursor:pointer;
+}
+.specialdates text {
+	font-size:12px;
+	fill:#444;
+}
+
+.negativo {
+	display:none;
+	visibility:hidden;
+}
+
+.page-footer {
+  margin-top:15px;	
+}
+
+.thing span {
+ width:50px;
+ height:20px;
+}
+
+.persontable {
+	fill:black;
+	display:block;)
+}
+.vipname {
+	font-size:20px;
+}
+.description{
+	font-size:12px;
+}
+
+.limpieza, #limpieza {
+	fill: #66CC00;
+	background-color: #66CC00;
+}
+.servicio, #servicio {
+	fill:#0099FF;
+	background-color: #0099FF;
+}
+.hoteles, #hoteles, .hotel, .hotels, .paradores, .marriot {
+	fill:#FF9900;
+	background-color: #FF9900;
+}
+.mantenimiento, #mantenimiento, .vacunas #vacunas, .vacuna #vacuna {
+	fill:#9900FF;
+	background-color: #9900FF;
+}
+.suministro, #suministro {
+	fill:#FF00CC;
+	background-color: #FF00CC;
+}
+.publicidad, #publicidad {
+	fill:#006699;
+	background-color: #006699;
+}
+
+.obras, #obras {
+	fill:#66FF66;
+	background-color: #66FF66;
+}
+
+.slide {
+	padding:40px 0 80px;
+	border-bottom:1px solid #777;
+}
+
+.slide small{
+	color:#000;
+}
+
+.slide a{
+	text-decoration:underline;
+	color:#000;
+}
+
+.slide h1, .slide h2 {
+	background: #00FF33;
+	padding:5px 0 5px 0;
+	line-height:40px;
+}
+
+.margin2 {
+  padding:150px 0 150px 0 !important;
+}
+
+mark {
+	background: none repeat scroll 0% 0% #CCFF66 !important;
+}
+
+#imagenes .row {
+	margin: 0 0 30px;
+}
+
+#random {
+	background: #febaad;
+}
