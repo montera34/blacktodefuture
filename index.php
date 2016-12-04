@@ -29,13 +29,6 @@
 	<link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css" />
 </head>
 
-<body>
-	<div class="container main-container">
-		<div class="share pull-right">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lab.montera34.com" data-text="¿Qué estaban gastando justo hace 10 años los de las tarjetas black?" data-via="montera34" data-lang="es">Twittear</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		</div>
-
 <?php
 // data file
 $csv_filename = "data/data.csv"; // relative path to data filename
@@ -98,13 +91,18 @@ if ($dayofweek == 0 ) {
 	$diasemana = "s&aacute;bado";
 }
 
-
-
 ?>
-
-
-	<h1>¿Qu&eacute; estaban gastando justo hace 10 años los de las tarjetas black?</h1>
-
+<body>
+<div class="container main-container">
+	<div class="row">
+		<div class="share pull-right">
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lab.montera34.com" data-text="¿Qué estaban gastando justo hace 10 años los de las tarjetas black?" data-via="montera34" data-lang="es">Twittear</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		</div>
+	</div>
+	<div class="row">
+		<h1>¿Qu&eacute; estaban gastando justo hace 10 años los de las tarjetas black?</h1>
+	</div>
 	<div class="row">
 		<div class="panel panel-default">
 			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' . $then; ?> y ...</div>
@@ -128,6 +126,7 @@ if ($dayofweek == 0 ) {
 		</div>
 	</div>
 	<div class="row">
+		Si quieres saber m&aacute;s de estos gastos puedes consultarlos gr&aacute;ficamente en <a href="http://numeroteca.org/tarjetasblack/">numeroteca.org/tarjetasblack</a>
 		<a class="btn btn-info pull-right" href="https://github.com/montera34/habiaunavez" role="button">Colabora <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
 	</div>
 </div>	
