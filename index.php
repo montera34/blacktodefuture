@@ -32,7 +32,7 @@
 <body>
 	<div class="container main-container">
 		<div class="share pull-right">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lab.montera34.com" data-text="¿Qué estaban gastando justo hace 10 años los de las tarjetas black" data-via="numeroteca" data-lang="es">Twittear</a>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://lab.montera34.com" data-text="¿Qué estaban gastando justo hace 10 años los de las tarjetas black?" data-via="montera34" data-lang="es">Twittear</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 		</div>
 
@@ -77,20 +77,44 @@ if ( $fp !== FALSE ) { // if the file exists and is readable
 		$line++;
 	}
 	fclose($fp);
+
+#Calculate day of the week and prints it in Spanish
+$dayofweek = date('w', strtotime($then));
+$diasemana = "";
+
+if ($dayofweek == 0 ) { 
+	$diasemana = "domingo";
+} elseif ($dayofweek == 1 ) {
+	$diasemana = "lunes";
+} elseif ($dayofweek == 2 ) {
+	$diasemana = "martes";
+} elseif ($dayofweek == 3 ) {
+	$diasemana = "mi&eacute;rcoles";
+} elseif ($dayofweek == 4 ) {
+	$diasemana = "jueves";
+} elseif ($dayofweek == 5 ) {
+	$diasemana = "viernes";
+} else {
+	$diasemana = "s&aacute;bado";
+}
+
+
+
 ?>
 
 
 	<h1>¿Qu&eacute; estaban gastando justo hace 10 años los de las tarjetas black?</h1>
-	<a class="btn btn-info pull-right" href="https://github.com/montera34/habiaunavez" role="button">Colabora <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
+
 	<div class="row">
-		<h2>Tal día como hoy hace 10 años...</h2>
-	</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' . $then; ?> y ...</div>
+			<div class="panel-body">
 
 <?php
 	if ( is_array($events) ) {
 		foreach ( $events as $e ) {
-			echo '<p>'.$e['quien'].' a las '.$e['hora'].' del '.$e['date']. ' gastaba '.$e['importe'].'euros con su tarjeta black en '.$e['comercio'].' ('.$e['operacion'].' en '.$e['actividad'].').</p>';
-		}
+			echo '<p class="linea">A las '.$e['hora']. ' <span class="persona"><strong>'.$e['quien'].'</strong></span>  gastaba <span class="label label-default dinero">'.$e['importe'].'€</span> con su tarjeta black en '.$e['comercio'].' ('.$e['operacion'].' en '.$e['actividad'].').</p>'; //quito la fecha: '.$e['date']. 
+		}		
 
 	} else { echo '¡Nadie utilizó las tarjetas black!' ; }
 
@@ -100,6 +124,11 @@ if ( $fp !== FALSE ) { // if the file exists and is readable
 		<p>Check the path: " .$csv_filename. ". Maybe it has to be absolute...</p>";
 } // end if file exist and is readable
 ?>
-
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<a class="btn btn-info pull-right" href="https://github.com/montera34/habiaunavez" role="button">Colabora <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
+	</div>
 </div>	
 </body>
