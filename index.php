@@ -27,6 +27,7 @@
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/libs/bootstrap.min.css" />
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"> 
 </head>
 
 <?php
@@ -117,13 +118,23 @@ if ($dayofweek == 0 ) {
 <?php
 	if ( is_array($events) ) {
 		foreach ( $events as $e ) {
-			echo '<p class="linea">a las '.$e['hora']. ' <span class="persona"><strong>'.$e['quien'].'</strong></span>';
+			echo '<p class="linea">a las <span class="mononumber"> '.$e['hora']. '</span> <span class="persona"><strong>'.$e['quien'].'</strong></span>';
 			if ( $e['operacion'] == "DISPOSICION EFECTIVO OFICINA" || $e['operacion'] == "REINTEGRO EN CAJERO PROPIO" || $e['operacion'] == "REINTEGRO EN CAJERO AJENO NACIONAL" ) {
-				echo ' sacaba ';
+			echo ' sacaba ';
 			} else {
 				echo ' gastaba ';
 			} 
-			echo '<span class="label label-default dinero">'.$e['importe'].'€</span> con su tarjeta black en '.$e['comercio'].' ('.$e['operacion'].' en '.$e['actividad'].').</p>'; //quito la fecha: '.$e['date']. 
+			echo '<span class="label label-default dinero">'.$e['importe'].'€</span> con su tarjeta black en <span class="lugar">';
+			if ( $e['comercio'] == 'NA') {
+				if ( $e['operacion'] == 'REINTEGRO EN CAJERO PROPIO') {
+					echo 'un cajero';
+				} else {
+					echo 'lugar desconocido';
+				}
+			} else {
+				echo $e['comercio'];
+			} 
+			echo '</span>  ('.$e['operacion'].' en '.$e['actividad'].').</p>'; //quito la fecha: '.$e['date']. 
 		}		
 
 	} else { echo '¡Nadie utilizó las tarjetas black!' ; }
