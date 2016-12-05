@@ -111,7 +111,13 @@ if ($dayofweek == 0 ) {
 <?php
 	if ( is_array($events) ) {
 		foreach ( $events as $e ) {
-			echo '<p class="linea">A las '.$e['hora']. ' <span class="persona"><strong>'.$e['quien'].'</strong></span>  gastaba <span class="label label-default dinero">'.$e['importe'].'€</span> con su tarjeta black en '.$e['comercio'].' ('.$e['operacion'].' en '.$e['actividad'].').</p>'; //quito la fecha: '.$e['date']. 
+			echo '<p class="linea">A las '.$e['hora']. ' <span class="persona"><strong>'.$e['quien'].'</strong></span>';
+			if ( $e['operacion'] == "DISPOSICION EFECTIVO OFICINA" || $e['operacion'] == "REINTEGRO EN CAJERO PROPIO" || $e['operacion'] == "REINTEGRO EN CAJERO AJENO NACIONAL" ) {
+				echo ' sacaba ';
+			} else {
+				echo ' gastaba ';
+			} 
+			echo '<span class="label label-default dinero">'.$e['importe'].'€</span> con su tarjeta black en '.$e['comercio'].' ('.$e['operacion'].' en '.$e['actividad'].').</p>'; //quito la fecha: '.$e['date']. 
 		}		
 
 	} else { echo '¡Nadie utilizó las tarjetas black!' ; }
