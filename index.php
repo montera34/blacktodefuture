@@ -91,6 +91,12 @@ if ($dayofweek == 0 ) {
 	$diasemana = "s&aacute;bado";
 }
 
+#TODO make es_ES locale work or install it
+#setlocale(LC_ALL,"es_ES");
+#$string = "24/11/2014";
+#$date = DateTime::createFromFormat("d/m/Y", $string);
+#echo strftime("%G",$date->getTimestamp());
+
 ?>
 <body>
 <div class="container main-container">
@@ -105,13 +111,13 @@ if ($dayofweek == 0 ) {
 	</div>
 	<div class="row">
 		<div class="panel panel-default">
-			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' . $then; ?> y ...</div>
+			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' .  date('d', strtotime($then)) . ' de  diciembre de '. date('Y', strtotime($then)); ?> y ...</div>
 			<div class="panel-body">
 
 <?php
 	if ( is_array($events) ) {
 		foreach ( $events as $e ) {
-			echo '<p class="linea">A las '.$e['hora']. ' <span class="persona"><strong>'.$e['quien'].'</strong></span>';
+			echo '<p class="linea">a las '.$e['hora']. ' <span class="persona"><strong>'.$e['quien'].'</strong></span>';
 			if ( $e['operacion'] == "DISPOSICION EFECTIVO OFICINA" || $e['operacion'] == "REINTEGRO EN CAJERO PROPIO" || $e['operacion'] == "REINTEGRO EN CAJERO AJENO NACIONAL" ) {
 				echo ' sacaba ';
 			} else {
