@@ -160,5 +160,9 @@ if ($dayofweek == 0 ) {
 		<p>Este un experimento de <a href="https://montera34.com">montera34.com</a>. Aportaron ideas <a href="https://twitter.com/martgnz">@guillelamb</a>y <a href="https://twitter.com/martgnz">@marting</a>.</p>
 		<a class="btn btn-dark pull-right" href="https://github.com/montera34/habiaunavez">Colabora <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
 	</div>
-</div>	
+</div>
+<?php
+//Include stats javascript
+include_once("stats.php");
+?>
 </body>
