@@ -1,6 +1,32 @@
+body {
+ background-color:#000 !important;
+}
+h1, a {
+ color:#CCC !important;
+}
+a {
+ text-decoration: underline !important;
+}
+.clear{
+ color:#AAA !important;
+}
+.mononumber, .dinero {
+	font-family: 'Inconsolata', monospace;
+}
 .dinero, .persona{
-	font-size:1.5em !important;
+	font-size:1.4em !important;
 }
 .linea {
  line-height: 2.6em;
+}
+.lugar {
+ background-color:#DDDDDD;
+ padding:3px;
+}
+.btn-dark {
+ background-color:#888 !important;
+}
+a.btn-dark {
+ color:#FFF !important;
+ text-decoration:none !important;
 }
