@@ -157,7 +157,7 @@ if ($dayofweek == 0 ) {
 	</div>
 	<div class="row clear">
 		<p>Si quieres saber m&aacute;s de estos gastos puedes consultarlos <a href="http://numeroteca.org/tarjetasblack/">gr&aacute;ficamente en esta visualizaci&oacute;n.</a></p>
-		<p>Este un experimento de <a href="https://montera34.com">montera34.com</a>. Aportaron ideas <a href="https://twitter.com/martgnz">@guillelamb</a>y <a href="https://twitter.com/martgnz">@marting</a>.</p>
+		<p>Este un experimento de <a href="https://montera34.com">montera34.com</a>. Aportaron ideas <a href="https://twitter.com/guillelamb">@guillelamb</a> y <a href="https://twitter.com/martgnz">@marting</a>.</p>
 		<a class="btn btn-dark pull-right" href="https://github.com/montera34/habiaunavez">Colabora <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
 	</div>
 </div>
