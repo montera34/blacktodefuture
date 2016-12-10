@@ -125,6 +125,7 @@ if ($dayofweek == 0 ) {
 <?php
 	if ( is_array($events) ) {
 		foreach ( $events as $e ) {
+			$total = $total + $e['importe'];
 			echo '<p class="linea">a las <span class="mononumber"> '.$e['hora']. '</span> <span class="persona"><strong>'.$e['quien'].'</strong></span>';
 			if ( $e['operacion'] == "DISPOSICION EFECTIVO OFICINA" || $e['operacion'] == "REINTEGRO EN CAJERO PROPIO" || $e['operacion'] == "REINTEGRO EN CAJERO AJENO NACIONAL" ) {
 			echo ' sacaba ';
@@ -151,9 +152,13 @@ if ($dayofweek == 0 ) {
 		<p>File with contents not found or not accesible.</p>
 		<p>Check the path: " .$csv_filename. ". Maybe it has to be absolute...</p>";
 } // end if file exist and is readable
+	echo '<hr><p class="linea">Un total de <span class="label label-default dinero">' . $total . '€</span> ese día.</p>';
 ?>
 			</div>
 		</div>
+	</div>
+	<div class="row clear	">
+			<span class="pull-right">@blacktodefuture</span>
 	</div>
 	<div class="row clear">
 		<p>Si quieres saber m&aacute;s de estos gastos puedes consultarlos <a href="http://numeroteca.org/tarjetasblack/">gr&aacute;ficamente en esta visualizaci&oacute;n.</a></p>
