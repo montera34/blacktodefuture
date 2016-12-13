@@ -38,7 +38,7 @@ $delimiter = ","; // field delimiter character
 $enclosure = '"'; // field enclosure character
 
 // then and now
-$then = date('Y-m-d',strtotime('10 years ago'));
+$then = date('Y-m-d',strtotime('10 years ago')); //
 $now = date('Y-m-d');
 
 // events container
@@ -115,7 +115,10 @@ if ($dayofweek == 0 ) {
 		</div>
 	</div>
 	<div class="row">
-		<h1>¿Qu&eacute; estaban gastando justo hace 10 años los de las tarjetas black?</h1>
+		<div class="text-center">
+			<h1>¿En qu&eacute; se gastaban las Tarjetas black hoy justo hace 10 años?</h1>
+			<h2><?php echo date('d', strtotime($then)) . ' diciembre '. date('Y', strtotime($then)); ?>
+		</div>
 	</div>
 	<div class="row">
 		<div class="panel panel-default">
@@ -142,7 +145,7 @@ if ($dayofweek == 0 ) {
 			} else {
 				echo $e['comercio'];
 			} 
-			echo '</span>  ('.$e['operacion'].' en '.$e['actividad'].').</p>'; //quito la fecha: '.$e['date']. 
+			echo '</span> <span class="detail">('.$e['operacion'].' en '.$e['actividad'].')</span>.</p>'; //quito la fecha: '.$e['date']. 
 		}		
 
 	} else { echo '¡Nadie utilizó las tarjetas black!' ; }

@@ -1,7 +1,7 @@
 body {
  background-color:#000 !important;
 }
-h1, a {
+h1, h2, a {
  color:#CCC !important;
 }
 a {
@@ -29,4 +29,7 @@ a {
 a.btn-dark {
  color:#FFF !important;
  text-decoration:none !important;
+}
+.detail {
+	font-size:0.9em;
 }
