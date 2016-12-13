@@ -130,17 +130,19 @@ if ($dayofweek == 0 ) {
 		foreach ( $events as $e ) {
 			$total = $total + $e['importe'];
 			echo '<p class="linea">a las <span class="mononumber"> '.$e['hora']. '</span> <span class="persona"><strong>'.$e['quien'].'</strong></span>';
+			//Checks if operation is extracting money or paying
 			if ( $e['operacion'] == "DISPOSICION EFECTIVO OFICINA" || $e['operacion'] == "REINTEGRO EN CAJERO PROPIO" || $e['operacion'] == "REINTEGRO EN CAJERO AJENO NACIONAL" ) {
 			echo ' sacaba ';
 			} else {
 				echo ' gastaba ';
 			} 
 			echo '<span class="label label-default dinero">'.$e['importe'].'€</span> con su tarjeta black en <span class="lugar">';
+			//checks in which comerce 
 			if ( $e['comercio'] == 'NA') {
 				if ( $e['operacion'] == 'REINTEGRO EN CAJERO PROPIO') {
 					echo 'un cajero';
 				} else {
-					echo 'lugar desconocido';
+					echo $e['actividad'];
 				}
 			} else {
 				echo $e['comercio'];
