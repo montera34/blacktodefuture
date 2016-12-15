@@ -22,7 +22,7 @@
 	<meta name="twitter:title" content="Hace 10 años gastaban las tarjetas black en..." />
 	<meta name="twitter:description" content="¿Qué estaban gastando justo hace 10 años los de las tarjetas black?" />
 	<meta name="twitter:creator" content="@montera34">
-	<meta name="twitter:image:src" content="pendiente" /> 	<!-- TODO: pending image -->
+	<meta name="twitter:image:src" content="img/blacktodefuture-presentacion.png" /> 	<!-- TODO: pending image -->
 	<meta property="twitter:account_id" content="137677992" />
 	
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
