@@ -37,8 +37,16 @@ $line_length = "4096"; // max line lengh (increase in case you have longer lines
 $delimiter = ","; // field delimiter character
 $enclosure = '"'; // field enclosure character
 
+// Grabs day from url to filter the list
+$dia = $_GET['dia'];
+
+if ( !empty($dia)) { //if day is specified in the url, use it
+	$then = date('Y-m-d',strtotime($dia));
+} else {
+	$then = date('Y-m-d',strtotime('10 years ago'));
+}
+
 // then and now
-$then = date('Y-m-d',strtotime('10 years ago')); //
 $now = date('Y-m-d');
 
 // events container
