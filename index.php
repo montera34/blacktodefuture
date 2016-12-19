@@ -155,13 +155,23 @@ if ($dayofweek == 0 ) {
 	</div>
 	<div class="row">
 		<div class="text-center">
-			<h1>¿En qu&eacute; se gastaban las Tarjetas black hoy justo hace 10 años?</h1>
+			<?php if ( $then == date('Y-m-d',strtotime('10 years ago')) ) {
+						echo '<h1>¿En qu&eacute; se gastaban las Tarjetas black hoy justo hace 10 años?</h1>';
+					} else {
+						echo '<h1>As&iacute; se gastaban las Tarjetas black</h1>';
+					} ?>
 			<h2><?php echo date('d', strtotime($then)) . ' '. $mes .' '. date('Y', strtotime($then)); ?>
 		</div>
 	</div>
 	<div class="row">
 		<div class="panel panel-default">
-			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' .  date('d', strtotime($then)) . ' de '. $mes .' de '. date('Y', strtotime($then)); ?> y ...</div>
+			<div class="panel-heading">
+			<?php if ( $then == date('Y-m-d',strtotime('10 years ago')) ) {
+						echo 'Tal día como hoy hace 10 años era ';
+					} else {
+						echo 'Era un ';
+					} 
+			echo $diasemana. ' ' .  date('d', strtotime($then)) . ' de '. $mes .' de '. date('Y', strtotime($then)); ?> y ...</div>
 			<div class="panel-body">
 
 <?php
