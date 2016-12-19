@@ -81,6 +81,37 @@ if ( $fp !== FALSE ) { // if the file exists and is readable
 	fclose($fp);
 
 #Calculate day of the week and prints it in Spanish
+$month = date('n', strtotime($then));
+$mes = "";
+
+if ($month == 1 ) { 
+	$mes = "enero";
+} elseif ($month == 2 ) {
+	$mes = "febrero";
+} elseif ($month == 3 ) {
+	$mes = "marzo";
+} elseif ($month == 4 ) {
+	$mes = "abril";
+} elseif ($month == 5 ) {
+	$mes = "mayo";
+} elseif ($month == 6 ) {
+	$mes = "junio";
+} elseif ($month == 7 ) {
+	$mes = "julio";
+} elseif ($month == 8 ) {
+	$mes = "agosto";
+} elseif ($month == 9 ) {
+	$mes = "septiembre";
+} elseif ($month == 10 ) {
+	$mes = "octubre";
+} elseif ($month == 11 ) {
+	$mes = "noviembre";
+} else {
+	$mes = "diciembre";
+}
+
+
+#Calculate day of the week and prints it in Spanish
 $dayofweek = date('w', strtotime($then));
 $diasemana = "";
 
@@ -125,12 +156,12 @@ if ($dayofweek == 0 ) {
 	<div class="row">
 		<div class="text-center">
 			<h1>¿En qu&eacute; se gastaban las Tarjetas black hoy justo hace 10 años?</h1>
-			<h2><?php echo date('d', strtotime($then)) . ' diciembre '. date('Y', strtotime($then)); ?>
+			<h2><?php echo date('d', strtotime($then)) . ' '. $mes .' '. date('Y', strtotime($then)); ?>
 		</div>
 	</div>
 	<div class="row">
 		<div class="panel panel-default">
-			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' .  date('d', strtotime($then)) . ' de  diciembre de '. date('Y', strtotime($then)); ?> y ...</div>
+			<div class="panel-heading">Tal día como hoy hace 10 años era <?php echo $diasemana. ' ' .  date('d', strtotime($then)) . ' de '. $mes .' de '. date('Y', strtotime($then)); ?> y ...</div>
 			<div class="panel-body">
 
 <?php
