@@ -19,10 +19,14 @@ Si quieres saber más sobre el proyecto puedes leer:
 
 La web está pensada para darte los datos de hace 10 años exactamente. 
 
-Si por cualquier razón quieres conocer qué pasó otros días puedes descargar todos los datos de 'data/data.csv' (https://github.com/montera34/blacktodefuture/tree/master/data) y revisarlos o utilizar el siguiente "huevo de pascua": añade "?dia=23-12-2006" a la url para ver un día cualquiera. Por ejemplo: http://lab.montera34.com/blacktodefuture/?dia=23-12-2006 para el 32 de diciembre de 2006.
+Si por cualquier razón quieres conocer qué pasó otros días puedes descargar y revisar todos los datos de aquí: https://github.com/montera34/blacktodefuture/tree/master/data.
+
+O utilizar el siguiente, añade a continuación de la URL "?dia=23-12-2006"para ver un día cualquiera. 
+
+Por ejemplo, para el 23 de diciembre de 2006 quería la URL así: http://lab.montera34.com/blacktodefuture/?dia=23-12-2006
 
 ## El bot de Twitter
-
+![image of @blacktodefuture Twitter bot](https://montera34.com/wp-content/uploads/2017/01/twitter-blacktodefuture-555x555.png)
 Los gastos que la web publica día a día con 10 años exactos de retraso son publicados en "tiempo real" en la cuenta de Twitter https://twitter.com/BlacktodeFuture
 
 Puedes acceder al código para generar el bot de Twitter en https://github.com/montera34/blacktodefuture.bot
