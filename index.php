@@ -160,7 +160,7 @@ if ($dayofweek == 0 ) {
 					} else {
 						echo '<h1>As&iacute; se gastaban las Tarjetas black</h1>';
 					} ?>
-			<h2><?php echo date('d', strtotime($then)) . ' '. $mes .' '. date('Y', strtotime($then)); ?>
+			<h2><?php echo $diasemana . ', '. date('d', strtotime($then)) . ' de '. $mes .' '. date('Y', strtotime($then)); ?>
 		</div>
 	</div>
 	<div class="row">
