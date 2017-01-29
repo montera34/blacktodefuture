@@ -215,10 +215,34 @@ if ($dayofweek == 0 ) {
 			<span class="pull-right">@blacktodefuture</span>
 	</div>
 	<div class="row clear">
-		<p>Si quieres saber m&aacute;s de estos gastos puedes consultarlos <a href="http://numeroteca.org/tarjetasblack/">gr&aacute;ficamente en esta visualizaci&oacute;n.</a></p>
-		<p><strong>Datos: </strong> fueron elaborados por Bankia y enviados a la Fiscal&iacute;a Anticorrrupci&oacute;n y <a href="http://elpais.com/especiales/2014/tarjetas-opacas-caja-madrid/">publicados en El Pa&iacute;s</a>. Los hemos recopilado todos en <a href="https://github.com/numeroteca/tarjetasblack/blob/master/data/data.tsv">un &uacute;nico documento descargable .tsv</a>. Adem&aacute;s, <a href="https://15mparato.wordpress.com/repositorio-legal-caso-bankia/">15mpararato</a> los tiene disponibles para su descarga en varios documentos en formato .xlsx.</p>
-		<p>Este un experimento de <a href="https://montera34.com">montera34.com</a> desarrollado por <a href="https://twitter.com/skotperez">@skotperez</a> y <a href="https://twitter.com/numeroteca">@numeroteca</a>. Aportaron ideas <a href="https://twitter.com/guillelamb">@guillelamb</a> y <a href="https://twitter.com/martgnz">@marting</a>.</p>
-		<a class="btn btn-dark pull-right" href="https://github.com/montera34/blacktodefuture">Colabora / Usa el c&oacute;digo y los datos <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
+		<div class="col-md-8">
+			<p>Si quieres saber m&aacute;s de estos gastos puedes consultarlos <a href="http://numeroteca.org/tarjetasblack/">gr&aacute;ficamente en esta visualizaci&oacute;n interactiva en numeroteca.org</a> (ojo, son muchos datos y tarda en cargar).</p>
+			<p>Para saber m&aacute;s sobre el caso de las tarjetas black y las preferents de Caja de Madrid-Bankia visita <a href="https://15mparato.wordpress.com/">15MpaRato</a>.
+			</p>
+			<h3>Datos</h3>
+			<p>Originalmente fueron elaborados por Bankia y enviados a la Fiscal&iacute;a Anticorrrupci&oacute;n. Posteriormente fueron publicados por varios medios de comunicaci&oacute;n.<br>
+			Nosotros los hemos descargado de <a href="http://elpais.com/especiales/2014/tarjetas-opacas-caja-madrid/">El Pa&iacute;s</a> y los hemos recopilado en <a href="https://github.com/numeroteca/tarjetasblack/blob/master/data/data.tsv">un &uacute;nico documento descargable</a> en formato .tsv. Adem&aacute;s, <a href="https://15mparato.wordpress.com/repositorio-legal-caso-bankia/">15mparato</a> los tiene disponibles para su descarga en varios documentos en formato .xlsx.</p>
+			<h3>Sobre el proyecto</h3>
+			<p>Este un experimento de <a href="https://montera34.com">montera34.com</a> desarrollado por <a href="https://twitter.com/skotperez">@skotperez</a> y <a href="https://twitter.com/numeroteca">@numeroteca</a>.<br>Aportaron ideas <a href="https://twitter.com/guillelamb">@guillelamb</a>, <a href="https://twitter.com/jorgelamb">@jorgelamb</a> y <a href="https://twitter.com/martgnz">@marting</a>.</p>
+			<h4>Para saber m&aacute;s</h4>
+			<p>
+				<ul>
+					<li>Proceso de creación de @blacktodefuture: <a href="http://numeroteca.org/2017/01/22/un-experimento-de-small-data-black-to-de-future">Un experimento de small data: black to de future</a> en numeroteca.org</li>
+					<li>Cómo se desarrolló técnicamente: <a href="https://voragine.net/visualizacion-de-datos/black-to-de-future">Black to de Future, el making-of</a> en voragine.net</li>
+				</ul>
+			</p>
+			<h4>C&oacute;digo</h4>
+			<p>El c&oacute;digo de los proyecto est&aacute; disponible en:
+				<ul>
+					<li><a href="https://github.com/montera34/blacktodefuture/">P&aacute;gina web (github.com)</a></li>
+					<li><a href="https://github.com/montera34/blacktodefuture.bot">Bot de Twitter (github.com)</a></li>
+				</ul>
+			</p>
+		</div>
+	</div>
+	<div class="row clear">
+		<div><a class="btn btn-dark pull-right" href="https://github.com/montera34/blacktodefuture">Colabora / Usa el c&oacute;digo <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span></a>
+		</div>
 	</div>
 </div>
 <?php
